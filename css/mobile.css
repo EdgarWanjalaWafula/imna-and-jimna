@@ -1,0 +1,120 @@
+/* // Extra small devices (portrai phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .mc-header .container {
+        border-radius: 0px;
+    } 
+
+    .toggle-container, .menu-drawer{
+        visibility: visible; 
+    }
+
+    .mc-padding {
+        padding: 35px 15px;
+    }
+
+    .mc-our-story .row {
+        padding: initial;
+    }
+
+    .site-title {
+        font-size: 35px;
+    }
+
+    .portfolio-thumb-list{
+        display: block;
+    }
+
+    /* Home */
+    .card-group > .card {
+        margin-bottom: 0px;
+    }
+
+    .service-img {
+        height: 430px;
+    }
+
+    .mc-services{
+        height: auto; 
+    }
+
+    .home-about, .home-about .owl-nav, .ofset-1, .our-portfolio .portfolio p, [class*="offset-"], .home-about a, .about-readmore{
+        margin:initial;
+    }
+
+    .mc-our-story .card-body, .home-services, .our-portfolio p{
+        padding:initial;
+    }
+
+    .single-services .col-md-4{
+        padding-left:15px; 
+    }
+
+    .mc-our-services .col-md-4{
+        padding: 60px;
+    }
+
+    .custom-nav {
+        left: -20px;
+    }
+
+    .clients .owl-nav {
+        position: initial;
+        top: initial;
+        transform: initial;
+        width: initial;
+    }
+
+    .clients .owl-nav .owl-prev {
+        position: initial;
+        left: initial;
+    }
+
+    .clients .owl-nav .owl-next {
+        position: initial;
+        right: initial;
+    }
+
+    .clients .owl-nav .owl-prev, .clients .owl-nav .owl-next {
+        top: initial;
+    }
+
+    .page-title .col-md-12 {
+        margin-left: 15px;
+    }
+
+    .mc-contact-details-nav.nav-fill .nav-item {
+        flex:unset;
+    }
+
+    .contact-details .nav-tabs .nav-link.active::before{
+        border-bottom: 4px solid #a29382;
+        left: 17px;
+        right: unset;
+        bottom: 3px;
+    }
+
+    .mc-footer .col {
+        flex-basis: unset;
+        flex-grow: unset;
+        width: 100%;
+        position: relative;
+    }
+
+    .mc-footer h6 {
+        margin: 15px 0px 0px 0px;
+    }
+
+    .core-values-tab .tab-pane {
+        margin: 15px;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}
