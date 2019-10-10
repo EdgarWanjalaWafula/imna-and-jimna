@@ -30,6 +30,11 @@
 			<div></div>
 		</div>
 	</div>
-<div id="page" class="site animated fadeIn slow">
-	
-	<div id="content" class="site-content">
+
+	<?php 
+		// Show mobile menu
+		get_template_part('template-parts/content', 'mobile-menu'); 
+	?>
+		<div id="page" class="site animated fadeIn slow">
+			
+			<div id="content" class="site-content">

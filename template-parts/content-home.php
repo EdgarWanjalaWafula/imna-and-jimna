@@ -125,9 +125,12 @@
                     </div>
 
                     <div class="client-logos">
-                        <ul class="list-unstyled d-flex align-items-center"> 
+                        <ul class="list-unstyled row align-items-center"> 
                             <?php 
-                                $clients = array('post_type' => 'clients', );
+                                $clients = array(
+                                    'post_type'         => 'clients',  
+                                    'posts_per_page'    =>  -1
+                                );
 
                                 $i = 0; 
 
@@ -136,8 +139,15 @@
                                 while($loop->have_posts()): $loop->the_post(); 
                                     $i++; 
                                     ?>
-                                        <li class="aos-animate" data-aos="fade-right" data-aos-delay="<?php echo $i; ?>00"><img src="<?php echo the_post_thumbnail_url(); ?>" title="<?php echo the_title(); ?>" alt="<?php echo the_title(); ?>" class="client-logo"></li>
+                                        <li class="aos-animate col-md-3" data-aos="fade-right" data-aos-delay="<?php echo $i; ?>00"><img src="<?php echo the_post_thumbnail_url(); ?>" title="<?php echo the_title(); ?>" alt="<?php echo the_title(); ?>" class="client-logo"></li>
                                     <?php 
+                                    if($i%4 == 0){
+                                        ?>
+                                        </ul> 
+
+                                        <ul class="list-unstyled row align-items-center pt-3"> 
+                                        <?php
+                                    }
                                 endwhile;  
 
                                 wp_reset_postdata(); 

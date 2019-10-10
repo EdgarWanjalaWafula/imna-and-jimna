@@ -21,6 +21,15 @@
 				<div class="col-md-3 d-flex align-items-center">
 					<!-- Site logo  -->
 					<?php the_custom_logo(''); ?>
+
+					<!-- Show on mobile only  -->
+					<div class="mobile-toggle-button">
+						<button class="btn rounded-0 border-0">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
 				</div>
 				<div class="col-md-7 d-flex align-items-center">
 					<nav class="navbar navbar-expand-md w-100 p-0">
@@ -41,7 +50,7 @@
 					</nav>
 				</div>
 				<div class="col-md-2 d-flex align-items-center justify-content-end">
-					<a href="" class="request-quote-cta text-uppercase ij-cb">get quote</a>
+					<a href="<?php echo home_url('get-quote'); ?>" class="request-quote-cta text-uppercase ij-cb">get quote</a>
 				</div>
 			</div>
 		</div>

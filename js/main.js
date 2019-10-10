@@ -15,6 +15,8 @@ jQuery(document).ready(function($){
       duration: 2500,
     });
     initPreloaderTimeout(); 
+    initMobileMenu(); 
+    initReadMore(); 
     
     function initHomeSlider(){
         var homeslider = $('.home-slider'); 
@@ -101,9 +103,28 @@ jQuery(document).ready(function($){
     })
 
     function initPreloaderTimeout(){
-    	setTimeout(function(){ 
-			$(".ij-preloader").fadeOut('slow'); 
-		}, 1200);
+        setTimeout(function(){ 
+            $(".ij-preloader").fadeOut('slow'); 
+        }, 1200);
+    }
+
+    function initMobileMenu(){
+
+      $(".mobile-toggle-button .btn").on("click", function(e){
+        e.preventDefault(); 
+
+        $(".mobile-menu").toggleClass("open-panel");
+        console.log("clicked");
+      })
+    }
+
+    function initReadMore(){
+      $('.readmore-content').readmore({ 
+        speed: 1000, 
+        moreLink: '<a href="#" class="about-readmore text-uppercase">read more</a>', 
+        lessLink: '<a href="#" class="about-readmore text-uppercase">read less</a>', 
+        collapsedHeight: 200
+      });
     }
 }); 
 

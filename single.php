@@ -8,9 +8,16 @@
  */
 
 get_header();
+
+// Load Navbar 
+get_template_part( 'template-parts/content', 'nav-bar' );
+
+            // Load Page Title 
+            get_template_part( 'template-parts/content', 'page-title' );
 ?>
 
-	<div id="primary" class="content-area">
+<section class="ir-padding">
+<div id="primary" class="content-area container">
 		<main id="main" class="site-main row">
 			<div class="col-md-8">
 				<?php
@@ -35,6 +42,7 @@ get_header();
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+</section>
 
 <?php
 get_footer();

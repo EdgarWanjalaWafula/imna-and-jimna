@@ -38,7 +38,10 @@
                     <div class="row d-flex align-items-center">
                         
                         <?php 
-                            $clients = array('post_type' =>  'clients', );
+                            $clients = array(
+                                'post_type'         =>  'clients', 
+                                'posts_per_page'    => -1
+                            );
 
                             $i = 0; 
 
@@ -64,7 +67,7 @@
                                 if($i%4==0){
                                     echo "</div>"; 
                                     echo "<br>";
-                                    echo "<div class='row'>"; 
+                                    echo "<div class='row d-flex align-items-center'>"; 
                                 }
                             endwhile;  
 

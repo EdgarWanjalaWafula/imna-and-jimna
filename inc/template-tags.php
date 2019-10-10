@@ -209,7 +209,7 @@ function show_services(){
 																	<img src="<?php echo the_post_thumbnail_url(); ?>" class="service-image" alt="">
 																	<div class="card-bdy">
 																		<h4 class="service-title"><?php echo the_title(); ?></h4>
-																		<a href="" class="ij-link ">learn more</a>
+																		<a href="<?php echo the_permalink(); ?>" class="ij-link ">learn more</a>
 																	</div>
 																</div>
 															<?php 
@@ -232,7 +232,8 @@ add_shortcode('show-services-home', 'show_services');
 function services_footer(){
 	$servicesfooter = array(
 		'post_type' 			=> 	'our_services', 
-		'posts_per_page'		=> 	4
+		'posts_per_page'		=> 	-1, 
+		// 'order'
 	);
 
 	$loop = new WP_QUERY($servicesfooter);
@@ -259,7 +260,9 @@ function menu_items($attr){
 	$menuservices = array(
 		'post_type' 			=> 	'our_services', 
 		'posts_per_page'		=> 	-1, 
-		'service_categories'	=> 	$product_type
+		'service_categories'	=> 	$product_type, 
+		'orderby'				=> 	'date', 
+		'order'					=> 	'asc'
 	);
 
 	$return = ""; 
@@ -270,11 +273,7 @@ function menu_items($attr){
 
 	while($l->have_posts()): $l->the_post(); 
 		$return .= "<li>";
-			if(get_the_id() == "184"){
-				$return .= "<a target='_blank' class='ij-link bimanet-dropdown' href='". get_field('download_document') ."'>"; 
-			} else {
-				$return .= "<a class='ij-link " . get_the_id() . "' href='" . get_the_permalink() . "'>";
-			}
+		$return .= "<a class='ij-link " . get_the_id() . "' href='" . get_the_permalink() . "'>";
 		$return .= get_the_title();
 		$return .= "</a>";
 		$return .= "</li>";   
@@ -354,3 +353,23 @@ function show_services_business($attr){
 }
 
 add_shortcode('show-services-business', 'show_services_business' ); 
+
+if(!function_exists('ij_blog_readmore')):
+	/**
+	 * Adds the read more permalink on the blog page and hides on the single page 
+	 */
+	function ij_blog_readmore(){
+		if(! is_single()):
+
+			$readmore = ""; 
+
+			$readmore = sprintf(
+				/* readmore link */
+				'<a title="' . get_the_title() . '" class="blog-readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">Read More</a>'
+			);
+
+			echo $readmore; 
+
+		endif; 
+	}
+endif; 
