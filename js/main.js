@@ -121,9 +121,9 @@ jQuery(document).ready(function($){
     function initReadMore(){
       $('.readmore-content').readmore({ 
         speed: 1000, 
-        moreLink: '<a href="#" class="about-readmore text-uppercase">read more</a>', 
-        lessLink: '<a href="#" class="about-readmore text-uppercase">read less</a>', 
-        collapsedHeight: 200
+        moreLink: '<a href="#" class="about-readmore text-uppercase position-relative hs-overlay">read more <i class="icon ion-ios-add"></i></a>', 
+        lessLink: '<a href="#" class="about-readmore text-uppercase">read less <i class="icon ion-ios-remove"></i></a>', 
+        collapsedHeight:400
       });
     }
 }); 

@@ -190,3 +190,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 require get_template_directory() . '/inc/bs4navwalker.php';
+
+// Change wp-admin logo 
+function my_login_logo_one() { 
+	?> 
+	<style type="text/css"> 
+		body.login div#login h1 a {
+			background-image: url('http://mathew.alfie.me.ke/wp-content/uploads/2019/09/logo.png');
+			background-size: 250px;
+			width: 100%;
+		}
+	</style>
+	 <?php 
+	} 
+add_action( 'login_enqueue_scripts', 'my_login_logo_one' );

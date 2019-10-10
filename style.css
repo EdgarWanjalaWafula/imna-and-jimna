@@ -138,7 +138,7 @@ body {
 	color:#000; 
 }
 
-.ij-cb, .ij-menu .nav-link, .contact-details-form span, .ubermenu-item  {
+.ij-cb, .ij-menu .nav-link, .contact-details-form span, .ubermenu-item, .about-readmore{
 	font-family: 'Cantarell Bold';
 	letter-spacing: 2px;
 }
@@ -579,9 +579,10 @@ a:hover{
 
 /* Single  */
 
-.single .icon{
-	font-size: 25px;
-	margin:0px 0px 0px 10px; 
+.single .icon {
+	font-size: 23px;
+	margin: 1px 0px 0px 10px;
+	font-weight: 600;
 }
 
 .our_services .btn {
@@ -796,6 +797,30 @@ a:hover{
 	transition-duration:700ms;
 }
 
+.hs-overlay::before {
+	content: "";
+	position: absolute;
+	background-image: -moz-linear-gradient(top, transparent, #ffffff);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #ffffff));
+	height: 200px;
+	width: 100%;
+	bottom: 24px;
+	left: 0px;
+	right: 0px;
+}
+
+.about-readmore {
+	color: #262261;
+	text-decoration: underline;
+	display: flex !important;
+	align-items: center;
+	width: 100% !important;
+}
+
+.entry-content .about-readmore {
+	justify-content: end;
+}
+
 .entry-footer span {
 	flex-grow: 1;
 }
@@ -828,6 +853,11 @@ a:hover{
 
 .cat-lnks span{
 	flex-grow:1;
+}
+
+.cat-links a {
+	color: #222;
+	border-bottom: 1px dotted #262261;
 }
 
 .entry-footer a {
@@ -863,6 +893,7 @@ a:hover{
 	padding: 24px;
 	box-shadow: 0px 0px 10px rgba(0,0,0,.3);
 	border-radius: 0px !important;
+	margin: 16px 0px 0px 0px;
 }
 
 .comment-form-cookies-consent input {

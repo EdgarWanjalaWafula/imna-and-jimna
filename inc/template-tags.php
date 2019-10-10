@@ -361,13 +361,14 @@ if(!function_exists('ij_blog_readmore')):
 	function ij_blog_readmore(){
 		if(! is_single()):
 
+			echo "<div class='entry-footer'>"; 
 			$readmore = ""; 
-
 			$readmore = sprintf(
+				
 				/* readmore link */
 				'<a title="' . get_the_title() . '" class="blog-readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">Read More</a>'
 			);
-
+			echo "</div>"; 
 			echo $readmore; 
 
 		endif; 

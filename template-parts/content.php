@@ -20,9 +20,9 @@
 		<?php
 		if(is_single()){
 			?>
-				<div class="readmore-content">
+				<div class="readmore-content text-justify">
 					<?php 
-						the_content( sprintf(
+						echo get_the_content( sprintf(
 							wp_kses(
 								/* translators: %s: Name of current post. Only visible to screen readers */
 								__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'imnajimna' ),
@@ -50,9 +50,7 @@
 			<?php imnajimna_entry_footer(); ?>
 		</div>
 
-		<div class="entry-footer">
 			<?php ij_blog_readmore(); ?>
-		</div>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
