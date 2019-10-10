@@ -855,7 +855,7 @@ a:hover{
 	flex-grow:1;
 }
 
-.cat-links a {
+.cat-links a, .cat-lnks a{
 	color: #222;
 	border-bottom: 1px dotted #262261;
 }

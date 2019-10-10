@@ -15,7 +15,6 @@
 			'class'	=> 	'img-fluid blog-image'
 		)
 	); ?>
-&nbsp; 
 	<div class="entry-content">
 		<?php
 		if(is_single()){

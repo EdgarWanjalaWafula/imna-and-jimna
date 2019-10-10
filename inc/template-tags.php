@@ -367,9 +367,11 @@ if(!function_exists('ij_blog_readmore')):
 				
 				/* readmore link */
 				'<a title="' . get_the_title() . '" class="blog-readmore" href="' . esc_url( get_permalink() ) . '" rel="bookmark">Read More</a>'
-			);
-			echo "</div>"; 
+			);			
+			
 			echo $readmore; 
+			echo "</div>"; 
+
 
 		endif; 
 	}
